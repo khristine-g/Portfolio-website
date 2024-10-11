@@ -1,0 +1,82 @@
+/* src/components/Home.css */
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh; /* Full viewport height */
+    padding: 0 20px; /* Padding on left and right */
+    background-color: #1a1a1a; /* Dark background */
+    color: #f0f0f0; /* Light text */
+
+}
+
+.text-section {
+    max-width: 600px; /* Maximum width for text section */
+    margin-right: 250px; /* Adjusted margin for spacing */
+}
+
+.text-section h1 {
+    font-size: 3rem; /* Large heading */
+    margin-bottom: 10px;
+}
+
+.text-section h2 {
+    font-size: 2rem; /* Medium heading */
+    margin-bottom: 20px;
+    color: #4CAF50; /* Accent color */
+}
+
+.text-section p {
+    font-size: 1.2rem; /* Standard text size */
+    line-height: 1.5; /* Line height for better readability */
+}
+
+.image-section {
+    position: relative; /* Positioning context for pseudo-elements */
+
+}
+
+.image-section img {
+    width: 600px; /* Responsive image */
+    height: 800px; /* Maintain aspect ratio */
+    object-fit: cover;
+    border-radius: 10px; /* Slightly rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+/* Left border */
+.image-section::before {
+    content: '';
+    position: absolute;
+    top: 0; /* Start at the top */
+    left: 0; /* Position the border on the left side */
+    height: 100%; /* Full height of the image */
+    width: 40px; /* Adjust thickness of the left border */
+    background-color: #4CAF50; /* Border color */
+   
+}
+
+/* Top border */
+.image-section::after {
+    content: '';
+    position: absolute;
+    top: 0; /* Position at the top */
+    left: 0; /* Align with the left */
+    height: 100%; /* Height of the top border */
+    width: 40px; /* Half width of the image */
+    background-color: #4CAF50; /* Border color */
+   
+}
+
+/* Bottom border */
+.image-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0; /* Position at the bottom */
+    left: 0; /* Align with the left */
+    height: 20px; /* Height of the bottom border */
+    width: 50%; /* Half width of the image */
+    background-color: #4CAF50; /* Border color */
+    border-bottom-left-radius: 10px; /* Rounded bottom left corner */
+    border-bottom-right-radius: 10px; /* Rounded bottom right corner */
+}
