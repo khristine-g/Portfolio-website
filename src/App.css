@@ -7,6 +7,21 @@ body{
 
   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCNk3IlAeBdPLMh_QHXyD9tKocDdy4ZaHK6g&s');
 }
+.custom-cursor {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: rgba(76, 175, 80, 0.5); /* Green shadow */
+  pointer-events: none;
+  transition: width 0.3s ease, height 0.3s ease;
+  z-index: 9999;
+}
+
+.nav-item:hover ~ .custom-cursor {
+  width: 35px;
+  height: 35px;
+}
 
 .App-logo {
   height: 40vmin;

@@ -1,0 +1,97 @@
+/* Sidebar navigation */
+.side-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.side-navbar h1 {
+    color: #fff;
+    margin-bottom: 40px;
+    font-size: 24px;
+    border-bottom: 1px solid #4CAF50;
+    padding-bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    color: #ddd;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    border: 1px solid transparent;
+    margin-bottom: 10px;
+    font-size: 18px;
+    border-radius: 4px;
+}
+
+.nav-icon {
+    margin-right: 15px;
+    font-size: 20px; /* Increase icon size */
+    transition: color 0.3s ease;
+    transform: rotate(0deg); /* Ensure icons are upright */
+}
+
+.nav-text {
+    position: relative;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.nav-item:hover {
+    border-color: #4CAF50;
+    background-color: #333;
+}
+
+.nav-item:hover .nav-icon,
+.nav-item:hover .nav-text {
+    color: #4CAF50;
+}
+
+.nav-item:hover .nav-text {
+    transform: translateY(5px); /* Move text downward on hover */
+}
+
+/* Cursor effect */
+body {
+    cursor: none; /* Hide default cursor */
+}
+
+.custom-cursor {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: rgba(76, 175, 80, 0.5); /* Green cursor shadow */
+    pointer-events: none;
+    transition: width 0.3s, height 0.3s; /* Animate size change */
+    z-index: 9999;
+}
+
+.nav-item:hover ~ .custom-cursor {
+    width: 100px;
+    height: 100px;
+}
+
+/* Ensures the navbar does not overlap content */
+body {
+    margin-left: 250px; /* Adjust this margin to match the navbar width */
+}
