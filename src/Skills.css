@@ -10,9 +10,10 @@
     color: #f0f0f0; /* Light text for dark theme */
 }
 
-skills-title {
-    color: white;
+.skills-title {
+    color: #4caf50;
     margin-bottom: 20px;
+    animation: titleRotation 4s forwards ; /* Apply rotation animation */
 }
 
 .skills-list {
@@ -21,7 +22,7 @@ skills-title {
     flex-wrap: wrap;
     max-width: 800px;
     gap: 20px; /* Space between skill items */
-    margin-left:300px;
+    margin-left: 300px;
 }
 
 .skill-item {
@@ -72,4 +73,15 @@ circle:nth-child(2) {
     margin-top: 10px;
     font-size: 1rem;
     color: #f0f0f0; /* Light text for skill name */
+    animation: titleRotation 4s forwards ; 
+}
+
+/* Animation for title rotation */
+@keyframes titleRotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }

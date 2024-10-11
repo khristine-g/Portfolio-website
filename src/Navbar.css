@@ -38,15 +38,16 @@ nav {
     text-decoration: none;
     transition: all 0.3s ease;
     position: relative;
-    border: 1px solid transparent;
+    /* border: 1px solid transparent; */
     margin-bottom: 10px;
     font-size: 18px;
     border-radius: 4px;
+
 }
 
 .nav-icon {
     margin-right: 15px;
-    font-size: 20px; /* Increase icon size */
+    font-size: 10px; /* Increase icon size */
     transition: color 0.3s ease;
     transform: rotate(0deg); /* Ensure icons are upright */
 }

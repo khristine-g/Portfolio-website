@@ -1,5 +1,5 @@
 // src/components/Skills.js
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import '../Skills.css';
 
 const skills = [
@@ -14,9 +14,17 @@ const skills = [
 ];
 
 const Skills = () => {
+    const titleRef = useRef(null);
+
+    useEffect(() => {
+        if (titleRef.current) {
+            titleRef.current.classList.add('animate-title');
+        }
+    }, []);
+
     return (
         <section className="skills-section">
-            <h2 className='skills-title'>My Skills</h2>
+            <h2 className='skills-title' ref={titleRef}>My Skills</h2>
             <div className="skills-list">
                 {skills.map((skill, index) => (
                     <div key={index} className="skill-item">
