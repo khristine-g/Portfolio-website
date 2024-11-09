@@ -1,87 +1,122 @@
-/* src/components/Skills.css */
-.skills-section {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 100vw;
-    background-color: #1a1a1a; /* Dark background */
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+/* Basic layout */
+#skills {
+    padding: 40px;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
     text-align: center;
-    color: #f0f0f0; /* Light text for dark theme */
 }
 
-.skills-title {
+/* Line with dots styling */
+.line-with-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: #4caf50;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.top-line {
+    width: 1300px; /* Longer line */
+    height: 2px;
+    background-color: #4caf50;
+}
+
+/* Flexbox for image and text */
+.hire-me-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Styling for the image without background */
+.skill-image-section img {
+    width: 400px;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Why Hire Me Section */
+.hire-me-section {
+    max-width: 600px;
+
+}
+
+.hire-me-section h3 {
+    font-size: 2rem;
     color: #4caf50;
     margin-bottom: 20px;
-    animation: titleRotation 4s forwards ; /* Apply rotation animation */
 }
 
-.skills-list {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 800px;
-    gap: 20px; /* Space between skill items */
-    margin-left: 300px;
+.hire-me-section p {
+    font-size: 1.1rem;
+    color: #f0f0f0;
+    line-height: 1.6;
+    margin-bottom: 10px;
 }
 
-.skill-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 150px; /* Size of each skill item */
+/* Skills title */
+.skills-title {
+    color: #4caf50;
+    margin: 60px 0 20px;
 }
 
-.circle {
+/* Skills carousel styling */
+.skills-carousel {
+    overflow: hidden;
+    width: 100%;
+    margin-top: 40px;
     position: relative;
-    width: 100px;
-    height: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-svg {
-    position: relative;
-    width: 100px;
-    height: 100px;
-    transform: rotate(-90deg); /* Rotate to make progress start at the top */
+.carousel-track {
+    display: flex;
+    animation: scrollCarousel 15s linear infinite ;
 }
 
-circle {
-    fill: none;
-    stroke: #555; /* Grey background for the circle */
-    stroke-width: 10;
-    stroke-dasharray: 282; /* Circumference of the circle (2 * pi * r) */
-    stroke-dashoffset: 0;
+.carousel-item {
+    min-width: 150px;
+    margin: 0 10px;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
 }
 
-circle:nth-child(2) {
-    stroke: #4caf50; /* Progress bar color */
-    stroke-linecap: round; /* Rounded edges for progress */
-    transition: stroke-dashoffset 1s ease;
+.carousel-item .icon {
+    font-size: 3rem;
+    color: #4caf50;
 }
 
-.percentage {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #4caf50; /* Accent color */
-}
-
-.skill-item p {
+.carousel-item p {
     margin-top: 10px;
-    font-size: 1rem;
-    color: #f0f0f0; /* Light text for skill name */
-    animation: titleRotation 4s forwards ; 
+    font-size: 1.1rem;
+    color: #f0f0f0;
 }
 
-/* Animation for title rotation */
-@keyframes titleRotation {
+/* Keyframe for carousel animation */
+@keyframes scrollCarousel {
     0% {
-        transform: rotate(0deg);
+        transform: translateX(0);
     }
     100% {
-        transform: rotate(360deg);
+        transform: translateX(-100%);
     }
 }

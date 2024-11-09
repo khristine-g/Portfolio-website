@@ -1,12 +1,11 @@
-// src/Components/Navbar.js
 import React from 'react';
 import { FaHome, FaUser, FaProjectDiagram, FaCode, FaEnvelope } from 'react-icons/fa';
 import '../Navbar.css';
 
 const Navbar = () => {
     return (
-        <aside className="side-navbar">
-            <h1>My Portfolio</h1>
+        <aside className="top-navbar">
+            <h1>Khristine</h1>
             <nav>
                 <a href="#home" className="nav-item">
                     <FaHome className="nav-icon" />
@@ -34,5 +33,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
 

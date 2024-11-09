@@ -1,39 +1,30 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './App.css'; // Global styles including the cursor shadow
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Projects from './Components/Projects';
+
+import AllProjects from './Components/AllProjects';
 import Navbar from './Components/Navbar';
 import Home from './Components/Home';
-import Skills from './Components/Skills';
-import Projects from './Components/Projects';
-import About from './Components/About';
-import Contact from './Components/Contact';
-import Footer from './Components/Footer';
+
 
 const App = () => {
-    const [cursorStyle, setCursorStyle] = useState({ top: 0, left: 0 });
-
-    useEffect(() => {
-        const handleMouseMove = (e) => {
-            setCursorStyle({ top: `${e.clientY}px`, left: `${e.clientX}px` });
-        };
-
-        window.addEventListener('mousemove', handleMouseMove);
-
-        return () => {
-            window.removeEventListener('mousemove', handleMouseMove);
-        };
-    }, []);
+    
 
     return (
         <div className="App">
+            <Router>
             <Navbar />
             <Home />
-            <Skills />
-            <About />
             <Projects />
-            <Contact />
-            <Footer />
-            {/* Custom cursor */}
-            <div className="custom-cursor" style={cursorStyle}></div>
+            
+            <Routes>
+               
+                <Route path="/all-projects" element={<AllProjects />} />
+            </Routes>
+        </Router>
+            
+           
         </div>
     );
 };

@@ -9,6 +9,14 @@
     color: #f0f0f0; /* Light text */
 
 }
+.hi-text{
+    font-size: 3rem; /* Large heading */
+    margin-bottom: 10px;
+    color: white;
+    margin-right: 300px;
+
+
+}
 
 .text-section {
     max-width: 600px; /* Maximum width for text section */
@@ -18,7 +26,7 @@
 .developer-name {
     font-size: 3rem; /* Large heading */
     margin-bottom: 10px;
-    color: #4CAF50;
+color: white;
 }
 
 .developer-title {
@@ -35,50 +43,67 @@
 
 .image-section {
     position: relative; /* Positioning context for pseudo-elements */
-
+    /* background-color: orangered; */
+  
 }
 
-.image-section img {
-    width: 600px; /* Responsive image */
-    height: 800px; /* Maintain aspect ratio */
+.home-image {
+    width: 550px; 
+    height: 700px; /* Maintain aspect ratio */
+    border-radius: 64px;
+  
     object-fit: cover;
-    border-radius: 10px; /* Slightly rounded corners */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Subtle shadow */
-}
+    margin-left: 50px;
+    margin-top: 50px;
 
-/* Left border */
-.image-section::before {
-    content: '';
-    position: absolute;
-    top: 0; /* Start at the top */
-    left: 0; /* Position the border on the left side */
-    height: 100%; /* Full height of the image */
-    width: 40px; /* Adjust thickness of the left border */
-    background-color: #4CAF50; /* Border color */
    
 }
+.download-cv-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 64px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin: 20px;
+    width: 120px;
+    height: 20px;
+}
 
-/* Top border */
-.image-section::after {
-    content: '';
-    position: absolute;
-    top: 0; /* Position at the top */
-    left: 0; /* Align with the left */
-    height: 100%; /* Height of the top border */
-    width: 40px; /* Half width of the image */
-    background-color: #4CAF50; /* Border color */
+.download-cv-btn:hover {
+    background-color: #388e3c;
+}
+.contact-btn{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4caf50;
+ 
+
+    color: #fff;
+    text-decoration: none;
+    border-radius: 64px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 120px;
+    height: 20px;
+
+
+
+}
+.contact-btn:hover {
+    background-color: #388e3c;
+}
+.social-link{
+
+    color:  #1a1a1a;
+    font-size: 10px;
+    transition: color 0.3s;
    
+  
+
 }
 
-/* Bottom border */
-.image-section::after {
-    content: '';
-    position: absolute;
-    bottom: 0; /* Position at the bottom */
-    left: 0; /* Align with the left */
-    height: 20px; /* Height of the bottom border */
-    width: 50%; /* Half width of the image */
-    background-color: #4CAF50; /* Border color */
-    border-bottom-left-radius: 10px; /* Rounded bottom left corner */
-    border-bottom-right-radius: 10px; /* Rounded bottom right corner */
-}

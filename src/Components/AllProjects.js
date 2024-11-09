@@ -1,12 +1,12 @@
-// src/components/Projects.js
+// src/components/AllProjects.js
 import React from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
 import '../Projects.css';
 import projectOneImage from '../images/portfolio9.jpg';
 import projectTwoImage from '../images/portfolio9.jpg';
 import projectThreeImage from '../images/portfolio9.jpg';
 import projectFourImage from '../images/portfolio9.jpg';
 
+// Array of all projects
 const projects = [
     {
         title: 'Project One',
@@ -32,22 +32,16 @@ const projects = [
         link: 'https://github.com/yourusername/project-four',
         image: projectFourImage,
     },
+    // Add more projects as needed
 ];
 
-const Projects = () => {
-    const navigate = useNavigate();
-
-    // Function to navigate to the full project page
-    const handleViewAll = () => {
-        navigate('/all-projects');
-    };
-
+const AllProjects = () => {
     return (
-        <section id="projects">
+        <section id="all-projects">
             <section className="projects-section">
-                <h2>My Projects</h2>
+                <h2>All Projects</h2>
                 <ul className="projects-list">
-                    {projects.slice(0, 2).map((project, index) => (
+                    {projects.map((project, index) => (
                         <li key={index} className={`project-item ${index % 2 === 0 ? 'left' : 'right'}`}>
                             <img src={project.image} alt={project.title} className="project-image" />
                             <div className="project-content">
@@ -58,11 +52,9 @@ const Projects = () => {
                         </li>
                     ))}
                 </ul>
-                <button onClick={handleViewAll} className="view-all-button">View All Projects</button>
             </section>
         </section>
     );
 };
 
-export default Projects;
-
+export default AllProjects;

@@ -5,6 +5,7 @@ import { FaLinkedin, FaInstagram, FaGithub, FaTwitter } from 'react-icons/fa'; /
 
 const Contact = () => {
     return (
+        <section id="contact">
         <section className="contact-section">
             <h2>Don't Be Shy!</h2>
             <p className="intro-text">
@@ -27,6 +28,7 @@ const Contact = () => {
                 <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
                 <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
             </div>
+        </section>
         </section>
     );
 };
