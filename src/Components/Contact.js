@@ -5,33 +5,37 @@ import { FaLinkedin, FaInstagram, FaGithub, FaTwitter } from 'react-icons/fa'; /
 
 const Contact = () => {
     return (
-        <section id="contact">
-        <section className="contact-section">
-            <h2>Don't Be Shy!</h2>
-            <p className="intro-text">
-                Feel free to get in touch with me. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
-            </p>
-            <div className="contact-info">
-                <p><strong>Mail me:</strong> <a href="mailto:kris@mail.com">kris@mail.com</a></p>
-                <p><strong>Call me:</strong> <a href="tel:+21621184010">+216 21 184 010</a></p>
-            </div>
-            <form className="contact-form">
-                <input type="text" placeholder="Your Name" required />
-                <input type="email" placeholder="Your Email" required />
-                <input type="text" placeholder="Your Subject" required />
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-            <div className="social-icons">
-                <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
-                <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-                <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
-                <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
-            </div>
-        </section>
+        <section id="contact" className="contact-section-wrapper">
+            <section className="contact-section">
+                <div className="left-side">
+                    <h2>Let's Connect</h2>
+                    <p className="intro-text">
+                        I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+                    </p>
+                    <div className="contact-info">
+                        <p><strong>Email:</strong> <a href="mailto:kris@mail.com">kris@mail.com</a></p>
+                        <p><strong>Phone:</strong> <a href="tel:+21621184010">+216 21 184 010</a></p>
+                    </div>
+                    <div className="social-icons">
+                        <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
+                        <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+                        <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
+                        <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
+                    </div>
+                </div>
+
+                <div className="right-side">
+                    <form className="contact-form">
+                        <input type="text" placeholder="Your Name" required />
+                        <input type="email" placeholder="Your Email" required />
+                        <input type="text" placeholder="Subject" required />
+                        <textarea placeholder="Message" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </section>
         </section>
     );
 };
 
 export default Contact;
-

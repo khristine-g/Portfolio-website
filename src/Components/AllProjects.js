@@ -1,4 +1,3 @@
-// src/components/AllProjects.js
 import React from 'react';
 import '../Projects.css';
 import projectOneImage from '../images/portfolio9.jpg';
@@ -6,7 +5,6 @@ import projectTwoImage from '../images/portfolio9.jpg';
 import projectThreeImage from '../images/portfolio9.jpg';
 import projectFourImage from '../images/portfolio9.jpg';
 
-// Array of all projects
 const projects = [
     {
         title: 'Project One',
@@ -32,27 +30,24 @@ const projects = [
         link: 'https://github.com/yourusername/project-four',
         image: projectFourImage,
     },
-    // Add more projects as needed
 ];
 
 const AllProjects = () => {
     return (
-        <section id="all-projects">
-            <section className="projects-section">
-                <h2>All Projects</h2>
-                <ul className="projects-list">
-                    {projects.map((project, index) => (
-                        <li key={index} className={`project-item ${index % 2 === 0 ? 'left' : 'right'}`}>
-                            <img src={project.image} alt={project.title} className="project-image" />
-                            <div className="project-content">
-                                <h3>{project.title}</h3>
-                                <p>{project.description}</p>
-                                <a href={project.link} target="_blank" rel="noopener noreferrer">View Project</a>
-                            </div>
-                        </li>
-                    ))}
-                </ul>
-            </section>
+        <section id="all-projects" className="projects-section">
+            <h2>All Projects</h2>
+            <ul className="projects-list">
+                {projects.map((project, index) => (
+                    <li key={index} className={`project-item ${index % 2 === 0 ? 'left' : 'right'}`}>
+                        <img src={project.image} alt={project.title} className="project-image" />
+                        <div className="project-content">
+                            <h3>{project.title}</h3>
+                            <p>{project.description}</p>
+                            <a href={project.link} target="_blank" rel="noopener noreferrer">View Project</a>
+                        </div>
+                    </li>
+                ))}
+            </ul>
         </section>
     );
 };
