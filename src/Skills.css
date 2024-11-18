@@ -1,10 +1,14 @@
+/* Skills Section */
 #skills {
     padding: 40px;
     background-color: #121212;
     color: #f0f0f0;
     text-align: center;
+    position: relative;
+    overflow: hidden; /* Prevents any overflow when animating */
 }
 
+/* Dots and Line */
 .line-with-dots {
     display: flex;
     align-items: center;
@@ -26,13 +30,16 @@
     background-color: #ff6f61;
 }
 
+/* Skills Title */
 .skills-title {
     color: #ff6f61;
     margin: 60px 0 20px;
     font-size: 2.5rem;
     font-weight: 700;
+    animation: fadeInUp 0.8s ease-out;
 }
 
+/* Skills Container */
 .skills-container {
     display: flex;
     justify-content: space-between;
@@ -40,40 +47,73 @@
     align-items: flex-start;
     max-width: 1200px;
     margin: 0 auto;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out 0.2s forwards; /* Smooth animation for the container */
 }
 
+/* Skills List */
 .skills-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 30px;
     width: 60%;
     margin-top: 40px;
+    opacity: 0;
+    animation: fadeInUp 1.2s ease-out 0.4s forwards; /* Fade-in animation for skills */
 }
 
+/* Skill Items */
 .skill-item {
     background-color: #222;
     border-radius: 10px;
     padding: 20px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+   
 }
 
+.skill-item:nth-child(odd) {
+    animation-delay: 0.2s; /* Delay staggered animation for odd items */
+}
+
+.skill-item:nth-child(even) {
+    animation-delay: 0.4s; /* Delay staggered animation for even items */
+}
+
+/* Zoom Effect on Hover */
 .skill-item:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Zoom in on hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6); /* Stronger shadow for zoomed item */
 }
 
+/* Skill Icons */
 .skill-item .icon {
     font-size: 3rem;
     color: #ff6f61;
+    transition: color 0.3s ease;
 }
 
+.skill-item:hover .icon {
+    color: #fff; /* Change icon color on hover */
+}
+
+/* Skill Text */
 .skill-item p {
     margin-top: 10px;
     font-size: 1.1rem;
     color: #f0f0f0;
+    transition: color 0.3s ease;
 }
 
+.skill-item:hover p {
+    color: #ff6f61; /* Change text color on hover */
+}
+
+/* Hire Me Section */
 .hire-me-section {
     display: flex;
     flex-direction: column;
@@ -85,6 +125,7 @@
     animation: slideUp 0.8s forwards 0.5s;
 }
 
+/* Hire Me Image Section */
 .skill-image-section img {
     width: 400px;
     height: 600px;
@@ -94,6 +135,7 @@
     margin-bottom: 20px;
 }
 
+/* Hire Me Text */
 .hire-me-text h3 {
     font-size: 2rem;
     color: #ff6f61;
@@ -106,6 +148,18 @@
     color: #f0f0f0;
     line-height: 1.6;
     margin-bottom: 10px;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes slideUp {

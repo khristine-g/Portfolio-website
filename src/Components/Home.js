@@ -7,6 +7,7 @@ const Home = () => {
     return (
         <section id="home">
             <div className="home-container">
+            <div className="home-circles"></div> {/* Decorative circles */}
                 <div className="text-section">
                     <h1 className="developer-name">Hi, I'm Khristine</h1>
                     <h2 className="developer-title">Software Developer</h2>

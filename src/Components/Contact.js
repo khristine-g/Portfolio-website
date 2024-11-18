@@ -13,7 +13,7 @@ const Contact = () => {
                         I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
                     </p>
                     <div className="contact-info">
-                        <p><strong>Email:</strong> <a href="mailto:kris@mail.com">kris@mail.com</a></p>
+                        <p><strong>Email:</strong> <a href="mailto:githigekhristine@mail.com">githigekhristine@mail.com</a></p>
                         <p><strong>Phone:</strong> <a href="tel:+21621184010">+216 21 184 010</a></p>
                     </div>
                     <div className="social-icons">
