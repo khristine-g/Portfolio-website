@@ -71,22 +71,13 @@
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease, opacity 0.3s ease;
-    opacity: 0;
+    opacity: 1; /* Ensure visibility */
     animation: fadeInUp 0.8s ease-out forwards;
-   
 }
 
-.skill-item:nth-child(odd) {
-    animation-delay: 0.2s; /* Delay staggered animation for odd items */
-}
-
-.skill-item:nth-child(even) {
-    animation-delay: 0.4s; /* Delay staggered animation for even items */
-}
-
-/* Zoom Effect on Hover */
+/* Skill Items with Hover Effect */
 .skill-item:hover {
-    transform: scale(1.1); /* Zoom in on hover */
+    transform: scale(1.1); /* Zoom in */
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6); /* Stronger shadow for zoomed item */
 }
 
@@ -172,4 +163,17 @@
         transform: translateY(0);
     }
 }
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(200px);
+    transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+
+.animate-on-scroll.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 

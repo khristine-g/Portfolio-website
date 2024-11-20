@@ -5,7 +5,7 @@ import { FaLinkedin, FaInstagram, FaGithub, FaTwitter } from 'react-icons/fa';
 
 const Home = () => {
     return (
-        <section id="home">
+        <section id="home"  className="animate-on-scroll">
             <div className="home-container">
             <div className="home-circles"></div> {/* Decorative circles */}
                 <div className="text-section">

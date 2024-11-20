@@ -1,8 +1,10 @@
 import React from 'react';
 import '../Skills.css';
-// import khristineImage from '../images/portfolio2.jpg';
 import { FaJs, FaReact, FaCss3Alt, FaPython, FaHtml5 } from 'react-icons/fa';
 import { DiBootstrap, DiDjango, DiRuby, DiGithubBadge, DiGit } from 'react-icons/di';
+import { MdApi } from 'react-icons/md'; // Icon for API Development
+import { FaLaptopCode } from 'react-icons/fa'; // Icon for Full Stack Development
+
 
 const skills = [
     { name: 'JavaScript', icon: <FaJs /> },
@@ -14,12 +16,16 @@ const skills = [
     { name: 'Django', icon: <DiDjango /> },
     { name: 'Ruby on Rails', icon: <DiRuby /> },
     { name: 'Git', icon: <DiGit /> },
-    { name: 'GitHub', icon: <DiGithubBadge /> }
+    { name: 'GitHub', icon: <DiGithubBadge /> },
+    { name: 'API Development (REST)', icon: <MdApi /> }, // New Skill
+    { name: 'Full Stack Development', icon: <FaLaptopCode /> } // New Skill
 ];
 
 const Skills = () => {
+
+   
     return (
-        <section id="skills">
+        <section id="skills" className="animate-on-scroll">
             <div className="line-with-dots">
                 <span className="dot"></span>
                 <span className="dot"></span>
@@ -36,9 +42,6 @@ const Skills = () => {
                     ))}
                 </div>
                 <div className="hire-me-section">
-                    {/* <div className="skill-image-section">
-                        <img src={khristineImage} alt="Khristine" />
-                    </div> */}
                     <div className="hire-me-text">
                         <h3>Why Hire Me For Your Next Project?</h3>
                         <p>
@@ -56,6 +59,4 @@ const Skills = () => {
 };
 
 export default Skills;
-
-
 

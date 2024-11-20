@@ -10,6 +10,7 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
     text-align: center;
     animation: fadeInUp 1s ease-out;
+
 }
 
 .about-section h2 {
@@ -112,4 +113,15 @@
         opacity: 1;
         transform: translateX(0);
     }
+}
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(200px);
+    transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+
+.animate-on-scroll.in-view {
+    opacity: 1;
+    transform: translateY(0);
 }

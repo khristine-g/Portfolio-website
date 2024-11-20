@@ -1,10 +1,10 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom'; 
 import '../Projects.css';
-import projectOneImage from '../images/project2.jpg';
-import projectTwoImage from '../images/home.jpg';
-import projectThreeImage from '../images/portfolio9.jpg';
-import projectFourImage from '../images/portfolio9.jpg';
+import projectOneImage from '../images/project6.jpg';
+import projectTwoImage from '../images/project3.jpg';
+import projectThreeImage from '../images/project7.jpeg';
+import projectFourImage from '../images/project8.jpg';
 
 const projects = [
     {
@@ -41,7 +41,8 @@ const Projects = () => {
     };
 
     return (
-        <section id="projects" className="projects-section">
+        <section id="projects"  className="animate-on-scroll">
+            <div  className="projects-section">
             <h2>Portfolio</h2>
             <div className="circles"></div> {/* Decorative circles */}
             <ul className="projects-list">
@@ -57,6 +58,7 @@ const Projects = () => {
                 ))}
             </ul>
             <button onClick={handleViewAll} className="view-all-button">View All Projects</button>
+            </div>
         </section>
     );
 };

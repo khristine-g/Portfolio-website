@@ -5,7 +5,8 @@ import { FaLinkedin, FaInstagram, FaGithub, FaTwitter } from 'react-icons/fa'; /
 
 const Contact = () => {
     return (
-        <section id="contact" className="contact-section-wrapper">
+        <section id="contact"   className="animate-on-scroll" >
+            <div  className="contact-section-wrapper">
             <section className="contact-section">
                 <div className="left-side">
                     <h2>Let's Connect</h2>
@@ -33,7 +34,9 @@ const Contact = () => {
                         <button type="submit">Send Message</button>
                     </form>
                 </div>
+                
             </section>
+            </div>
         </section>
     );
 };
