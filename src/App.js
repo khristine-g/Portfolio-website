@@ -9,6 +9,7 @@ import About from "./Components/About";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
 import useScrollAnimation from "./Components/useScrollAnimation";
+import Stats from "./Components/Stats";
 
 const App = () => {
     useScrollAnimation(); // Ensure scroll animations are initialized
@@ -24,6 +25,7 @@ const App = () => {
                     <Route path="/all-projects" element={<AllProjects />} />
                 </Routes>
                 <About />
+                <Stats />
                 <Contact />
                 <Footer />
             </Router>

@@ -2,7 +2,58 @@
 .contact-section-wrapper {
     background-color: #121212; /* Dark background to match other pages */
     padding: 50px 20px;
+    margin-bottom: 100px;
+    margin-top: 100px;
 }
+/* Decorative circles */
+.contact-circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  
+}
+
+.contact-circles::before, .contact-circles::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(255, 111, 97, 0.2); /* Light circle color */
+    animation: animateCircle 4s infinite ease-in;
+    opacity: 1; /* Ensure they remain visible */
+}
+
+.contact-circles::before {
+    width: 150px;
+    height: 150px;
+    top: 90%; /* Position top-right */
+    right: 10%; /* Position top-right */
+}
+
+.contact-circles::after {
+    width: 200px;
+    height: 200px;
+    bottom: 70%; /* Position bottom-left */
+    left: 10%; /* Position bottom-left */
+}
+
+/* Keyframe animation for circles */
+@keyframes animateCircle {
+    0% {
+        transform: scale(1);
+        opacity: 0.4;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.2;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.4;
+    }
+}
+
 
 /* Contact Section Styling */
 .contact-section {
@@ -11,7 +62,7 @@
     align-items: flex-start;
     padding: 40px;
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1600px;
     background-color: #1a1a1a; /* Slightly lighter background for the section */
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
@@ -154,6 +205,55 @@ h2 {
         font-size: 1rem;
     }
 }
+/* Decorative Line */
+.contact-divider-line {
+    width: 120px; /* Set width for horizontal orientation */
+    height: 4px; /* Set height for horizontal line */
+    background-color: #ff6f61;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    animation: pulse 3s ease-in-out infinite; /* Pulsating effect */
+}
+
+/* Animated Gradient */
+.contact-divider-line::before {
+    content: '';
+    position: absolute;
+    left: -150%; /* Start off-screen horizontally */
+    top: 0; /* Align gradient with the horizontal line */
+    width: 400%; /* Large width to allow smooth sliding */
+    height: 100%; /* Match the height of the horizontal line */
+    background: linear-gradient(
+        to right, /* Adjust gradient direction for horizontal sliding */
+        #ff6f61,
+        #ff867c,
+        #ffffff,
+        #ff867c,
+        #ff6f61
+    );
+    animation: slideGradient 3s linear infinite;
+}
+
+/* Gradient Animation */
+@keyframes slideGradient {
+    from {
+        left: -150%;
+    }
+    to {
+        left: 150%;
+    }
+}
+/* Pulsating Animation */
+@keyframes pulse {
+    0%, 100% {
+        transform: scaleY(1); /* Normal size */
+    }
+    50% {
+        transform: scaleY(1.5); /* Enlarged size */
+    }
+}
+
 
 .animate-on-scroll {
     opacity: 0;

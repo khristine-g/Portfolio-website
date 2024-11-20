@@ -24,7 +24,7 @@ const About = () => {
                         <h3><FaBriefcase className="icon" /> Experience</h3>
                         <div className="item" >
                             <span>2024 - Present</span>
-                            <h4>Web Developer, Apertacura</h4>
+                            <h4>Software Developer, Apertacura</h4>
                         </div>
                         <div className="item" >
                             <span>2023 - 2024</span>

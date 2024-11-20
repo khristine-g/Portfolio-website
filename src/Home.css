@@ -100,20 +100,62 @@ body {
 .download-cv-btn,
 .contact-btn {
     padding: 12px 30px;
-    background-color: #ff6f61;
-    color: #ffffff;
+    background-color: #ff6f61; /* Button background */
+    color: #ffffff; /* Text color */
     text-decoration: none;
-    border-radius: 30px;
+    border-radius: 30px; /* Rounded corners */
     font-size: 1rem;
     font-weight: bold;
-    transition: transform 0.2s ease, background-color 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden; /* Keeps glow effect contained */
+    box-shadow: 0 0 15px rgba(255, 111, 97, 0.7); /* Persistent glow */
 }
 
+/* Modern hover effects */
 .download-cv-btn:hover,
 .contact-btn:hover {
-    background-color: #ff867c;
-    transform: translateY(-5px);
+    background-color: #ff867c; /* Lighter background on hover */
+    transform: scale(1.1); /* Subtle scaling for a modern look */
+    box-shadow: 0 0 30px rgba(255, 111, 97, 0.9), 0 0 60px rgba(255, 111, 97, 0.5); /* Intense glow on hover */
 }
+
+/* Create dynamic glow trail on hover */
+.download-cv-btn::after,
+.contact-btn::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 111, 97, 0.5), rgba(255, 111, 97, 0));
+    z-index: -1; /* Ensure it’s behind the button */
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.download-cv-btn:hover::after,
+.contact-btn:hover::after {
+    opacity: 1;
+    transform: scale(1.5); /* Expand the glow */
+}
+
+/* Persistent glowing pulse animation */
+@keyframes persistent-pulse {
+    0%, 100% {
+        box-shadow: 0 0 15px rgba(255, 111, 97, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 25px rgba(255, 111, 97, 0.5);
+    }
+}
+
+.download-cv-btn,
+.contact-btn {
+    animation: persistent-pulse 2s infinite; /* Continuous pulse */
+}
+
 
 .home-social-icons {
     display: flex;

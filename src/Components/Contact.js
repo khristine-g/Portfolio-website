@@ -6,9 +6,11 @@ import { FaLinkedin, FaInstagram, FaGithub, FaTwitter } from 'react-icons/fa'; /
 const Contact = () => {
     return (
         <section id="contact"   className="animate-on-scroll" >
+             <div className="contact-circles"></div> {/* Decorative circles */}
             <div  className="contact-section-wrapper">
             <section className="contact-section">
                 <div className="left-side">
+                <div className="contact-divider-line"></div>
                     <h2>Let's Connect</h2>
                     <p className="intro-text">
                         I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.

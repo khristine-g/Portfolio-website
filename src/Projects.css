@@ -146,16 +146,30 @@ h2 {
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1rem;
-    transition: color 0.3s ease;
+    display: inline-flex; /* Align text and icon inline */
+    align-items: center;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.project-content a::after {
+    content: '→'; /* Unicode arrow symbol */
+    font-size: 1.8rem; /* Increased font size for the arrow */
+    margin-left: 10px; /* Space between text and arrow */
+    transition: transform 0.3s ease;
 }
 
 .project-content a:hover {
     color: #f0f0f0;
 }
 
+.project-content a:hover::after {
+    transform: translateX(7px); /* Arrow moves slightly more on hover */
+}
+
+
 /* View All Projects Button */
 .view-all-button {
-    margin-top: 30px;
+    margin-top: 70px;
     padding: 12px 25px;
     background-color: #ff6f61;
     color: #121212;
@@ -164,6 +178,7 @@ h2 {
     font-size: 1.2rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
+   margin-left: 700px;
 }
 
 .view-all-button:hover {

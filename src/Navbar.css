@@ -1,20 +1,21 @@
-/* Top navigation bar */
+/* Navbar container */
 .top-navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 80px; /* Adjusted for a sleeker look */
-    background: rgba(0, 0, 0, 0.7); /* Dark, transparent background */
+    height: 80px; /* Sleek navbar height */
+    background: rgba(0, 0, 0, 0.7); /* Dark, semi-transparent background */
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding: 0 30px;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2); /* Soft shadow for a modern touch */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
     z-index: 1000;
-    backdrop-filter: blur(10px); /* Added a subtle blur effect */
+    backdrop-filter: blur(10px); /* Subtle blur for modern look */
 }
 
+/* Logo */
 .top-navbar .logo {
     color: #ffffff;
     font-size: 30px;
@@ -29,72 +30,83 @@
 
 .top-navbar .logo-icon {
     margin-right: 10px;
-    font-size: 30px; /* Adjust size of icon */
-    color: #ff6f61; /* Modern icon color */
+    font-size: 30px;
+    color: #ff6f61; /* Modern warm tone */
 }
 
+/* Navigation links container */
 .nav-links {
     display: flex;
     align-items: center;
 }
 
+/* Navigation items */
 .nav-item {
     display: flex;
     align-items: center;
     padding: 0 20px;
-    color: #dcdcdc; /* Lighter text color */
+    color: #dcdcdc; /* Neutral text color */
     text-decoration: none;
-    transition: color 0.3s ease, transform 0.3s ease;
-    font-size: 18px; /* Slightly larger font size */
+    transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 18px; /* Slightly larger font size for readability */
+    position: relative; /* Ensure glow positioning is accurate */
 }
 
+/* Hover effect on nav items */
 .nav-item:hover {
-    color: #ff6f61; /* Modern green hover color */
-    transform: scale(1.05); /* Slight scale up effect */
+    color: #ff6f61; /* Modern orange color on hover */
+    transform: scale(1.05); /* Slight scale effect */
+    box-shadow: 0 4px 15px rgba(255, 111, 97, 0.7); /* Warm orange glow */
+    border-radius: 5px; /* Rounded edges for smoother glow */
 }
 
+/* Hover effect on icons */
 .nav-item:hover .nav-icon {
-    color: #ff6f61; /* Green icon color on hover */
+    color: #ff6f61; /* Icon matches text hover color */
     transform: translateX(4px); /* Subtle icon animation */
 }
 
+/* Navigation icons */
 .nav-icon {
     margin-right: 12px;
     font-size: 20px; /* Larger icons */
     transition: transform 0.3s ease;
 }
 
+/* Navigation text */
 .nav-text {
     font-size: 16px;
     font-weight: 500;
 }
 
+/* Active link */
 .nav-item.active {
-    color: #4caf50; /* Highlight active link */
+    color: #4caf50; /* Highlight color for active link */
 }
 
 .nav-item.active .nav-icon {
-    color: #4caf50;
+    color: #4caf50; /* Match icon color to active link */
 }
 
-/* Offset body content to account for the navbar height */
+/* Offset body content for navbar height */
 body {
-    margin-top: 80px; /* Adjusted for a sleeker navbar height */
+    margin-top: 80px; /* Adjust to match navbar height */
 }
 
-/* Responsive styles */
+/* Responsive styles for smaller screens */
 @media (max-width: 768px) {
     .top-navbar {
         padding: 0 20px;
-    }
-
-    .nav-item {
-        font-size: 16px;
     }
 
     .nav-links {
         flex-direction: column;
         gap: 15px;
         align-items: flex-start;
+    }
+
+    .nav-item {
+        font-size: 16px;
+        padding: 10px 0;
     }
 }
