@@ -34,9 +34,9 @@ const Stats = () => {
   useEffect(() => {
     if (isInView) {
       const intervals = [
-        { target: 100, key: 'happyClients' },
-        { target: 200, key: 'projectsCompleted' },
-        { target: 10, key: 'yearsOfExperience' },
+        { target: 5, key: 'happyClients' },
+        { target: 20, key: 'projectsCompleted' },
+        { target: 2, key: 'yearsOfExperience' },
         { target: 15, key: 'techStacksMastered' },
       ];
 
