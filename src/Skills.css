@@ -1,11 +1,10 @@
-/* Skills Section */
 #skills {
     padding: 40px;
     background-color: #121212;
     color: #f0f0f0;
     text-align: center;
     position: relative;
-    overflow: hidden; /* Prevents any overflow when animating */
+    overflow: hidden;
 }
 
 /* Dots and Line */
@@ -25,7 +24,8 @@
 }
 
 .top-line {
-    width: 1300px;
+    width: 100%;
+    max-width: 1300px;
     height: 2px;
     background-color: #ff6f61;
 }
@@ -34,7 +34,7 @@
 .skills-title {
     color: #ff6f61;
     margin: 60px 0 20px;
-    font-size: 2.5rem;
+    font-size: 2rem; /* Smaller font size for better responsiveness */
     font-weight: 700;
     animation: fadeInUp 0.8s ease-out;
 }
@@ -47,20 +47,21 @@
     align-items: flex-start;
     max-width: 1200px;
     margin: 0 auto;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
     opacity: 0;
     transform: translateY(30px);
-    animation: fadeInUp 1s ease-out 0.2s forwards; /* Smooth animation for the container */
+    animation: fadeInUp 1s ease-out 0.2s forwards;
 }
 
 /* Skills List */
 .skills-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 30px;
-    width: 60%;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Smaller min width for better responsiveness */
+    gap: 20px;
+    flex: 1; /* Adjusts width dynamically */
     margin-top: 40px;
     opacity: 0;
-    animation: fadeInUp 1.2s ease-out 0.4s forwards; /* Fade-in animation for skills */
+    animation: fadeInUp 1.2s ease-out 0.4s forwards;
 }
 
 /* Skill Items */
@@ -71,17 +72,13 @@
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease, opacity 0.3s ease;
-    opacity: 1; /* Ensure visibility */
-    animation: fadeInUp 0.8s ease-out forwards;
 }
 
-/* Skill Items with Hover Effect */
 .skill-item:hover {
-    transform: scale(1.1); /* Zoom in */
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6); /* Stronger shadow for zoomed item */
+    transform: scale(1.1);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
 }
 
-/* Skill Icons */
 .skill-item .icon {
     font-size: 3rem;
     color: #ff6f61;
@@ -89,59 +86,47 @@
 }
 
 .skill-item:hover .icon {
-    color: #fff; /* Change icon color on hover */
+    color: #fff;
 }
 
-/* Skill Text */
 .skill-item p {
     margin-top: 10px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #f0f0f0;
     transition: color 0.3s ease;
 }
 
 .skill-item:hover p {
-    color: #ff6f61; /* Change text color on hover */
+    color: #ff6f61;
 }
 
 /* Hire Me Section */
 .hire-me-section {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    width: 35%;
-    opacity: 0;
-    transform: translateY(50px);
+    min-width: 280px;
     animation: slideUp 0.8s forwards 0.5s;
-}
-
-/* Hire Me Image Section */
-.skill-image-section img {
-    width: 400px;
-    height: 600px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
-    margin-bottom: 20px;
 }
 
 /* Hire Me Text */
 .hire-me-text h3 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: #ff6f61;
     margin-bottom: 20px;
     font-weight: 700;
 }
 
 .hire-me-text p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #f0f0f0;
     line-height: 1.6;
     margin-bottom: 10px;
 }
 
-/* Keyframes for Animations */
+/* Animations */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -164,16 +149,58 @@
     }
 }
 
-.animate-on-scroll {
-    opacity: 0;
-    transform: translateY(200px);
-    transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hire-me-section {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+
+    .hire-me-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .hire-me-text p {
+        font-size: 0.95rem;
+    }
 }
 
-.animate-on-scroll.in-view {
-    opacity: 1;
-    transform: translateY(0);
+@media (max-width: 768px) {
+    .skills-title {
+        font-size: 1.8rem;
+    }
+
+    .skills-list {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 15px;
+    }
+
+    .hire-me-text p {
+        font-size: 0.9rem;
+    }
 }
 
+@media (max-width: 480px) {
+    .skills-title {
+        font-size: 1.5rem;
+    }
 
+    .skills-list {
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    }
 
+    .hire-me-text h3 {
+        font-size: 1.3rem;
+    }
+
+    .hire-me-text p {
+        font-size: 0.85rem;
+    }
+}
