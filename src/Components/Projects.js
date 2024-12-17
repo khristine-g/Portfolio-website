@@ -10,13 +10,13 @@ const projects = [
     {
         title: 'Ecommerce website',
         description: 'A web application that allows users to manage their tasks effectively.',
-        link: 'https://github.com/yourusername/project-one',
+        link: 'https://truebeauty-tan.vercel.app/',
         image: projectOneImage,
     },
     {
         title: 'Real-estate website',
         description: 'An e-commerce platform built with React and Node.js.',
-        link: 'https://github.com/yourusername/project-two',
+        link: 'https://urbanrealty.vercel.app/',
         image: projectTwoImage,
     },
     {

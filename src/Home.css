@@ -253,6 +253,7 @@ body {
 /* Responsive Styles */
 @media (max-width: 1024px) {
     .home-container {
+        
         gap: 30px;
         padding: 40px 5%;
     }
@@ -266,15 +267,17 @@ body {
     }
 
     .home-image {
-        width: 80%;
+        width: 70vw;
+        margin: 20px;
     }
 }
 
 @media (max-width: 768px) {
     .home-container {
-        flex-direction: column;
+        flex-direction: row;
         text-align: center;
         padding: 20px;
+        margin-top:30px;
     }
 
     .text-section {
@@ -290,7 +293,7 @@ body {
     }
 
     .home-image {
-        width: 80%;
+        width: 90vw;
     }
 
     .buttons {

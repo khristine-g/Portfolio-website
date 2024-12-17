@@ -1,12 +1,12 @@
-import React from 'react';
-import { FaHome, FaUser, FaProjectDiagram, FaCode, FaEnvelope, FaCodeBranch } from 'react-icons/fa';
-import '../Navbar.css';
+import React from "react";
+import { FaHome, FaUser, FaProjectDiagram, FaCode, FaEnvelope, FaCodeBranch } from "react-icons/fa";
+import "../Navbar.css";
 
 const Navbar = () => {
     return (
         <aside className="top-navbar">
             <h1 className="logo">
-                <FaCodeBranch className="logo-icon" />Khristine
+                <FaCodeBranch className="logo-icon" /> Khristine
             </h1>
             <nav className="nav-links">
                 <a href="#home" className="nav-item">
