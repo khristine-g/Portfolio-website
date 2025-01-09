@@ -1,7 +1,6 @@
 import React from 'react';
 import '../Home.css';
 import khristineImage from '../images/khristine.jpeg';
-import { FaLinkedin, FaInstagram, FaGithub, FaTwitter } from 'react-icons/fa';
 
 const Home = () => {
     return (
@@ -18,12 +17,7 @@ const Home = () => {
                         <a href="/path/to/cv.pdf" download className="download-cv-btn">Download CV</a>
                         <a href="/contact" className="contact-btn">Contact</a>
                     </div>
-                    <div className="home-social-icons">
-                        <a className="social-link" href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
-                        <a className="social-link" href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-                        <a className="social-link" href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
-                        <a className="social-link" href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
-                    </div>
+                 
                 </div>
                 <div className="divider-line"></div>
                 <div className="image-section">

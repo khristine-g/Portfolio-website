@@ -45,11 +45,12 @@ const Skills = () => {
                     <div className="hire-me-text">
                         <h3>Why Hire Me For Your Next Project?</h3>
                         <p>
-                            I’m highly proficient and well-versed with various programming languages, such as JavaScript, React, and other basic Front-End frameworks.
-                            I also use Ruby on Rails and Django for backend development.
+                        I bring a strong foundation in front-end development with expertise in JavaScript, React, and other modern frameworks to create intuitive and engaging user interfaces. On the backend, I leverage Ruby on Rails and Django to build robust, scalable, and secure applications. 
+                           
                         </p>
                         <p>
-                            Additionally, I have worked and interacted with tools such as Figma, making me a skilled UI/UX designer.
+                        My ability to seamlessly integrate front-end and back-end technologies ensures a cohesive and efficient development process. With a passion for problem-solving and delivering high-quality solutions, I’m dedicated to helping your projects succeed.
+                           
                         </p>
                     </div>
                 </div>
