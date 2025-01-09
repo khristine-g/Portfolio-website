@@ -1,19 +1,18 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../Projects.css';
 import projectOneImage from '../images/project6.jpg';
 import projectTwoImage from '../images/project3.jpg';
 
 const projects = [
     {
         title: 'Ecommerce website',
-        description: 'A web application that allows users to manage their tasks effectively.',
+        description: 'This website allows customers to explore a wide range of beauty products, add items to their cart, and securely complete their purchases.',
         link: 'https://truebeauty-tan.vercel.app/',
         image: projectOneImage,
     },
     {
         title: 'Real-estate website',
-        description: 'An e-commerce platform built with React and Node.js.',
+        description: 'A modern real estate platform that simplifies property buying, selling, and renting. This website features an intuitive interface where users can browse listings, view detailed property information, and connect with agents. ',
         link: 'https://urbanrealty.vercel.app/',
         image: projectTwoImage,
     },
