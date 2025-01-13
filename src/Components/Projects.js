@@ -22,13 +22,14 @@ const Projects = () => {
     const navigate = useNavigate(); // Initialize the navigate hook
 
     const handleViewAll = () => {
+        console.log('Navigating to All Projects');
         navigate('/all-projects'); // Navigate to the "All Projects" route
     };
 
     return (
         <section id="projects" className="animate-on-scroll">
             <div className="projects-section">
-                <h2>Portfolio</h2>
+                <h2>Projects</h2>
                 <div className="circles"></div> {/* Decorative circles */}
                 <ul className="projects-list">
                     {projects.map((project, index) => (

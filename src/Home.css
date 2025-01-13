@@ -7,6 +7,7 @@ body {
     color: #e0e0e0;
 }
 
+/* Home Container */
 .home-container {
     display: flex;
     align-items: center;
@@ -16,18 +17,20 @@ body {
     flex-wrap: wrap;
     min-height: 100vh;
     box-sizing: border-box;
+    position: relative;
 }
-/* Decorative circles */
+
+/* Decorative Circles */
 .home-circles {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-  
 }
 
-.home-circles::before, .home-circles::after {
+.home-circles::before,
+.home-circles::after {
     content: '';
     position: absolute;
     border-radius: 50%;
@@ -40,14 +43,14 @@ body {
     width: 100px;
     height: 100px;
     top: 90%; /* Position top-right */
-    right: 10%; /* Position top-right */
+    right: 10%;
 }
 
 .home-circles::after {
     width: 150px;
     height: 150px;
-    bottom: 70%; /* Position bottom-left */
-    left: 10%; /* Position bottom-left */
+    bottom: 70%;
+    left: 10%;
 }
 
 /* Keyframe animation for circles */
@@ -66,6 +69,7 @@ body {
     }
 }
 
+/* Text Section */
 .text-section {
     max-width: 45%;
 }
@@ -103,91 +107,23 @@ body {
     background-color: #ff6f61; /* Button background */
     color: #ffffff; /* Text color */
     text-decoration: none;
-    border-radius: 30px; /* Rounded corners */
+    border-radius: 30px;
     font-size: 1rem;
     font-weight: bold;
     transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
     position: relative;
-    overflow: hidden; /* Keeps glow effect contained */
-    box-shadow: 0 0 15px rgba(255, 111, 97, 0.7); /* Persistent glow */
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(255, 111, 97, 0.7);
 }
 
-/* Modern hover effects */
 .download-cv-btn:hover,
 .contact-btn:hover {
-    background-color: #ff867c; /* Lighter background on hover */
-    transform: scale(1.1); /* Subtle scaling for a modern look */
-    box-shadow: 0 0 30px rgba(255, 111, 97, 0.9), 0 0 60px rgba(255, 111, 97, 0.5); /* Intense glow on hover */
+    background-color: #ff867c;
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(255, 111, 97, 0.9), 0 0 60px rgba(255, 111, 97, 0.5);
 }
 
-/* Create dynamic glow trail on hover */
-.download-cv-btn::after,
-.contact-btn::after {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255, 111, 97, 0.5), rgba(255, 111, 97, 0));
-    z-index: -1; /* Ensure it’s behind the button */
-    opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.download-cv-btn:hover::after,
-.contact-btn:hover::after {
-    opacity: 1;
-    transform: scale(1.5); /* Expand the glow */
-}
-
-/* Persistent glowing pulse animation */
-@keyframes persistent-pulse {
-    0%, 100% {
-        box-shadow: 0 0 15px rgba(255, 111, 97, 0.7);
-    }
-    50% {
-        box-shadow: 0 0 25px rgba(255, 111, 97, 0.5);
-    }
-}
-
-.download-cv-btn,
-.contact-btn {
-    animation: persistent-pulse 2s infinite; /* Continuous pulse */
-}
-
-
-.home-social-icons {
-    display: flex;
-    margin-top: 20px;
-    gap: 15px;
-}
-
-.social-link {
-    color: #ffffff;
-    font-size: 2rem;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.social-link:hover {
-    color: #ff6f61;
-    transform: scale(1.2);
-}
-
-.image-section {
-    max-width: 40%;
-    position: relative;
-}
-
-.home-image {
-    width: 500px;
-    height: 700px;
-    border-radius: 64px;
-    object-fit: cover;
-    animation: slideInFromRight 1.5s ease-in-out;
-}
-
-/* Decorative Line */
+/* Divider Line */
 .divider-line {
     height: 120px;
     width: 4px;
@@ -195,10 +131,9 @@ body {
     border-radius: 50px;
     position: relative;
     overflow: hidden;
-    animation: pulse 3s ease-in-out infinite; /* Added pulsating effect */
+    animation: pulse 3s ease-in-out infinite;
 }
 
-/* Animated Gradient */
 .divider-line::before {
     content: '';
     position: absolute;
@@ -217,7 +152,6 @@ body {
     animation: slideGradient 3s linear infinite;
 }
 
-/* Gradient Animation */
 @keyframes slideGradient {
     from {
         top: -150%;
@@ -227,33 +161,68 @@ body {
     }
 }
 
-/* Pulsating Animation */
 @keyframes pulse {
-    0%, 100% {
-        transform: scaleY(1); /* Normal size */
+    0%,
+    100% {
+        transform: scaleY(1);
     }
     50% {
-        transform: scaleY(1.5); /* Enlarged size */
+        transform: scaleY(1.5);
     }
 }
 
+/* Code Snippet Section (App Window Look) */
+.code-section {
+    max-width: 40%;
+    background: linear-gradient(145deg, #1e1e1e, #252525);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 20px #0f0f0f, -10px -10px 20px #2f2f2f;
+    position: relative;
+}
 
-/* Slide-in Animation */
-@keyframes slideInFromRight {
-    from {
-        opacity: 0;
-        transform: translateX(200px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+.code-snippet-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.code-circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.code-circle.red {
+    background-color: #ff6f61;
+}
+
+.code-circle.yellow {
+    background-color: #ffb74d;
+}
+
+.code-circle.green {
+    background-color: #81c784;
+}
+
+/* Code Block Styles */
+.mock-code {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    font-family: 'Fira Code', monospace;
+    font-size: 1rem;
+    line-height: 1.8;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #2f2f2f;
+    overflow-x: auto;
 }
 
 /* Responsive Styles */
 @media (max-width: 1024px) {
     .home-container {
-        
         gap: 30px;
         padding: 40px 5%;
     }
@@ -266,22 +235,20 @@ body {
         font-size: 1.8rem;
     }
 
-    .home-image {
-        width: 70vw;
-        margin: 20px;
+    .code-section {
+        width: 100%;
     }
 }
 
 @media (max-width: 768px) {
     .home-container {
-        flex-direction: row;
+        flex-direction: column;
         text-align: center;
         padding: 20px;
-        margin-top:30px;
     }
 
     .text-section {
-        max-width: 90%;
+        max-width: 100%;
     }
 
     .developer-name {
@@ -292,23 +259,11 @@ body {
         font-size: 1.5rem;
     }
 
-    .home-image {
-        width: 90vw;
-    }
-
     .buttons {
         justify-content: center;
     }
-}
 
-.animate-on-scroll {
-    opacity: 0;
-    transform: translateY(200px);
-    transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+    .code-section {
+        max-width: 100%;
+    }
 }
-
-.animate-on-scroll.in-view {
-    opacity: 1;
-    transform: translateY(0);
-}
-

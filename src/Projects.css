@@ -6,6 +6,8 @@
     transition: background-color 0.3s ease;
     animation: slideIn 1s ease-out;
     position: relative; /* To position circles correctly */
+    margin-right: 200px;
+    margin-left: 200px;
 }
 
 /* Decorative circles */
@@ -111,8 +113,8 @@ h2 {
 
 /* Image styling */
 .project-image {
-    width: 600px;
-    height: 600px;
+    width: 500px;
+    height: 500px;
     object-fit: cover;
     border-radius: 64px;
     transition: transform 0.3s ease;

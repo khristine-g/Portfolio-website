@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../Projects.css';
 import projectOneImage from '../images/portfolio9.jpg';
 import projectTwoImage from '../images/portfolio9.jpg';
@@ -33,6 +34,12 @@ const projects = [
 ];
 
 const AllProjects = () => {
+    const navigate = useNavigate(); // Initialize the navigate hook
+
+    const handleSeeLess = () => {
+        console.log('Navigating to All Projects');
+        navigate('/'); // Navigate to the "All Projects" route
+    };
     return (
         <section id="all-projects" className="projects-section">
             <h2>All Projects</h2>
@@ -48,6 +55,9 @@ const AllProjects = () => {
                     </li>
                 ))}
             </ul>
+            <button onClick={handleSeeLess} className="view-all-button">
+                    View All Projects
+                </button>
         </section>
     );
 };
