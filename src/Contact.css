@@ -1,18 +1,17 @@
-/* Contact Section Wrapper */
+/* Contact Section Styling */
 .contact-section-wrapper {
     background-color: #121212; /* Dark background to match other pages */
     padding: 50px 20px;
     margin-bottom: 100px;
     margin-top: 100px;
 }
-/* Decorative circles */
+
 .contact-circles {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-  
 }
 
 .contact-circles::before, .contact-circles::after {
@@ -54,8 +53,6 @@
     }
 }
 
-
-/* Contact Section Styling */
 .contact-section {
     display: flex;
     justify-content: space-between;
@@ -71,14 +68,18 @@
     transition: background-color 0.3s ease;
 }
 
-/* Left Side Styling */
 .left-side {
-    width: 45%; /* 45% width for the left side */
-    text-align: left;
+    width: 50%; /* Adjust width for balance */
+    text-align: center; /* Center the content */
     color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Align items in the center */
+    justify-content: center; /* Center vertically */
+    gap: 20px; /* Add spacing between elements */
 }
 
-h2 {
+.contact-title {
     font-size: 2.5rem;
     color: #ff6f61; /* Consistent color with home and projects */
     margin-bottom: 20px;
@@ -127,7 +128,6 @@ h2 {
     transform: scale(1.1);
 }
 
-/* Right Side Styling (Form) */
 .right-side {
     width: 45%; /* 45% width for the form side */
     padding-left: 20px;
@@ -139,6 +139,8 @@ h2 {
     gap: 15px;
     margin-bottom: 30px;
     max-width: 100%;
+    position: relative; /* Ensure the form is positioned in its natural flow */
+    z-index: 10; /* Ensure form appears above other elements */
 }
 
 .contact-form input,
@@ -173,6 +175,18 @@ h2 {
     background-color: #e65a53; /* Slightly darker shade */
 }
 
+.status-message {
+    margin-top: 20px;
+    color: #ff6f61; /* Success color */
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .contact-section {
@@ -205,14 +219,17 @@ h2 {
         font-size: 1rem;
     }
 }
+
 /* Decorative Line */
 .contact-divider-line {
-    width: 120px; /* Set width for horizontal orientation */
+    width: 150px; /* Set width for horizontal orientation */
     height: 4px; /* Set height for horizontal line */
     background-color: #ff6f61;
     border-radius: 50px;
     position: relative;
     overflow: hidden;
+    margin-left: 40px;
+    margin-bottom: 30px;
     animation: pulse 3s ease-in-out infinite; /* Pulsating effect */
 }
 
@@ -227,43 +244,20 @@ h2 {
     background: linear-gradient(
         to right, /* Adjust gradient direction for horizontal sliding */
         #ff6f61,
-        #ff867c,
-        #ffffff,
-        #ff867c,
+        #ffb3b3,
         #ff6f61
     );
-    animation: slideGradient 3s linear infinite;
+    animation: slide 3s ease-in-out infinite; /* Smooth sliding effect */
 }
 
-/* Gradient Animation */
-@keyframes slideGradient {
-    from {
-        left: -150%;
-    }
-    to {
-        left: 150%;
-    }
-}
-/* Pulsating Animation */
-@keyframes pulse {
-    0%, 100% {
-        transform: scaleY(1); /* Normal size */
+@keyframes slide {
+    0% {
+        left: -150%; /* Start off-screen */
     }
     50% {
-        transform: scaleY(1.5); /* Enlarged size */
+        left: 100%; /* End off-screen, to create a slide effect */
+    }
+    100% {
+        left: -150%;
     }
 }
-
-
-.animate-on-scroll {
-    opacity: 0;
-    transform: translateY(200px);
-    transition: opacity 0.9s ease-out, transform 0.9s ease-out;
-}
-
-.animate-on-scroll.in-view {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-

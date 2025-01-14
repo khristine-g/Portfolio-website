@@ -36,13 +36,13 @@ body {
     border-radius: 50%;
     background-color: rgba(255, 111, 97, 0.2); /* Light circle color */
     animation: animateCircle 4s infinite ease-in;
-    opacity: 1; /* Ensure they remain visible */
+    opacity: 1;
 }
 
 .home-circles::before {
     width: 100px;
     height: 100px;
-    top: 90%; /* Position top-right */
+    top: 90%;
     right: 10%;
 }
 
@@ -53,7 +53,6 @@ body {
     left: 10%;
 }
 
-/* Keyframe animation for circles */
 @keyframes animateCircle {
     0% {
         transform: scale(1);
@@ -105,15 +104,13 @@ body {
 .download-cv-btn,
 .contact-btn {
     padding: 12px 30px;
-    background-color: #ff6f61; /* Button background */
-    color: #ffffff; /* Text color */
+    background-color: #ff6f61;
+    color: #ffffff;
     text-decoration: none;
     border-radius: 30px;
     font-size: 1rem;
     font-weight: bold;
     transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-    overflow: hidden;
     box-shadow: 0 0 15px rgba(255, 111, 97, 0.7);
 }
 
@@ -172,7 +169,7 @@ body {
     }
 }
 
-/* Code Snippet Section (App Window Look) */
+/* Code Snippet Section */
 .code-section {
     max-width: 40%;
     background: linear-gradient(145deg, #1e1e1e, #252525);
@@ -208,7 +205,6 @@ body {
     background-color: #81c784;
 }
 
-/* Code Block Styles */
 .mock-code {
     background-color: #1e1e1e;
     color: #e0e0e0;
@@ -219,6 +215,37 @@ body {
     border-radius: 10px;
     border: 1px solid #2f2f2f;
     overflow-x: auto;
+    position: relative;
+}
+
+.mock-code::before {
+    content: "// Hello, World! 👩‍💻";
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 4s steps(25, end) infinite, blink 0.5s step-end infinite alternate;
+    color: #ff6f61;
+    font-size: 1.2rem;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    from,
+    to {
+        border-right: 2px solid transparent;
+    }
+    50% {
+        border-right: 2px solid #ff6f61;
+    }
 }
 
 /* Responsive Styles */
@@ -267,4 +294,46 @@ body {
     .code-section {
         max-width: 100%;
     }
+}
+
+@media (max-width: 480px) {
+    .home-container {
+        padding: 15px;
+    }
+
+    .developer-name {
+        font-size: 2rem;
+    }
+
+    .developer-title {
+        font-size: 1.2rem;
+    }
+
+    .developer-description {
+        font-size: 1rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .download-cv-btn,
+    .contact-btn {
+        width: 100%;
+    }
+
+    .code-section {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+
+    .code-snippet-header {
+        justify-content: center;
+    }
+}
+
+/* Smooth Transitions */
+* {
+    transition: all 0.3s ease-in-out;
 }

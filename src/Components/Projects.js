@@ -23,14 +23,16 @@ const projects = [
     github: ' https://github.com/khristine-g/Real-estate',
     image: projectTwoImage,
   },
-  {
-    title: 'Social Media App',
-    description: 'A social platform where users can share posts, like, and comment.',
-    techStack: 'React, Bootstrap',
-    link: 'https://socialmedia-app.vercel.app/',
-    github: 'https://github.com/userna',
-    image: projectThreeImage,
-  },
+  
+    {
+      title: 'Crowdfunding Website',
+      description: 'A platform to support and fund innovative projects, empowering creators to bring their ideas to life through collective contributions.',
+      techStack: 'React, Bootstrap',
+      link: 'https://socialmedia-app.vercel.app/',
+      github: 'https://github.com/userna',
+      image: projectThreeImage,
+    },
+    
   {
     title: 'Portfolio Website',
     description: 'A personal portfolio showcasing my web development projects and skills.',
@@ -46,7 +48,7 @@ const Projects = () => {
     <section id="projects" className=" animate-on-scroll" >
     <div className=" projects-section">
       <div className="projects-container">
-        <h2>Projects</h2>
+        <h2 className='projects-title'>Projects</h2>
         <div className="projects-list">
           {projects.map((project, index) => (
             <div key={index} className="project-item">

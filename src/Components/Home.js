@@ -23,10 +23,10 @@ const Home = () => {
   return (
     <section id="home" className="animate-on-scroll">
       <div className="home-container">
-        {/* Home Circles */}
+        {/* Decorative Circles */}
         <div className="home-circles"></div>
 
-        {/* Text Section: Hi, I'm Khristine */}
+        {/* Text Section */}
         <div className="text-section">
           <h1 className="developer-name">Hi, I'm Khristine</h1>
           <h2 className="developer-title">
@@ -36,17 +36,17 @@ const Home = () => {
             I'm dedicated to building intuitive, user-focused web applications. I’m passionate about leveraging technology to solve problems and create meaningful digital experiences.
           </p>
           <div className="buttons">
-            <a href="/path/to/cv.pdf" download className="download-cv-btn">
+            <a href="/Khristine-cv.docx" download className="download-cv-btn">
               Download CV
             </a>
-            <a href="/contact" className="contact-btn">Contact</a>
+            <a href="#contact" className="contact-btn">Contact</a>
           </div>
         </div>
 
         {/* Divider Line */}
         <div className="divider-line"></div>
 
-        {/* Code Snippet Section: App Window Look */}
+        {/* Code Snippet Section */}
         <div className="code-section">
           <div className="code-snippet-header">
             <span className="code-circle red"></span>
@@ -55,7 +55,9 @@ const Home = () => {
           </div>
           <pre className="mock-code">
             <code>
-              {`// Hello, World! 👩‍💻
+              {/* Typing effect only once */}
+              {"// Hello, World! 👩‍💻"}
+              {`
 function makeApp() {
     const skills = ["React", "Ruby on Rails", "UI/UX Design"];
     const motto = "Transforming ideas into user-friendly web apps!";

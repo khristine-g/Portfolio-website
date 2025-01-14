@@ -4,10 +4,10 @@ import '../Stats.css';
 const Stats = () => {
   const [isInView, setIsInView] = useState(false);
   const [counts, setCounts] = useState({
-    happyClients: 0,
     projectsCompleted: 0,
+    technologiesLearned: 0,
     yearsOfExperience: 0,
-    techStacksMastered: 0,
+    repositoriesCreated: 0, // Repositories Created
   });
   const statsRef = useRef(null);
 
@@ -34,10 +34,10 @@ const Stats = () => {
   useEffect(() => {
     if (isInView) {
       const intervals = [
-        { target: 5, key: 'happyClients' },
         { target: 20, key: 'projectsCompleted' },
+        { target: 10, key: 'technologiesLearned' },
         { target: 2, key: 'yearsOfExperience' },
-        { target: 15, key: 'techStacksMastered' },
+        { target: 100, key: 'repositoriesCreated' }, // Example for Repositories Created
       ];
 
       intervals.forEach(({ target, key }) => {
@@ -60,20 +60,20 @@ const Stats = () => {
     <section id="stats" className="animate-on-scroll" ref={statsRef}>
       <div className="stats-container">
         <div className="stat-item">
-          <h2 className="stat-number">{counts.happyClients}<span>+</span></h2>
-          <p className="stat-label">Happy Clients</p>
-        </div>
-        <div className="stat-item">
           <h2 className="stat-number">{counts.projectsCompleted}<span>+</span></h2>
           <p className="stat-label">Projects Completed</p>
+        </div>
+        <div className="stat-item">
+          <h2 className="stat-number">{counts.technologiesLearned}<span>+</span></h2>
+          <p className="stat-label">Technologies Learned</p>
         </div>
         <div className="stat-item">
           <h2 className="stat-number">{counts.yearsOfExperience}<span>+</span></h2>
           <p className="stat-label">Years of Experience</p>
         </div>
         <div className="stat-item">
-          <h2 className="stat-number">{counts.techStacksMastered}<span>+</span></h2>
-          <p className="stat-label">Tech Stacks Mastered</p>
+          <h2 className="stat-number">{counts.repositoriesCreated}<span>+</span></h2>
+          <p className="stat-label">Repositories Created</p> {/* Updated label */}
         </div>
       </div>
     </section>
