@@ -56,7 +56,7 @@ const Home = () => {
           <pre className="mock-code">
             <code>
               {/* Typing effect only once */}
-              {"// Hello, World! 👩‍💻"}
+            
               {`
 function makeApp() {
     const skills = ["React", "Ruby on Rails", "UI/UX Design"];
