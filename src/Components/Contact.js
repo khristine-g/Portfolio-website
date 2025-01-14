@@ -41,7 +41,7 @@ const Contact = () => {
                         </p>
                         <div className="contact-info">
                             <p><strong>Email:</strong> <a href="mailto:githigekhristine@mail.com">githigekhristine@mail.com</a></p>
-                            <p><strong>Phone:</strong> <a href="tel:+21621184010">+216 21 184 010</a></p>
+                            <p><strong>Phone:</strong> <a href="tel:+254725952696">+254725952696</a></p>
                         </div>
                         <div className="social-icons">
                             <a href="https://www.linkedin.com/in/khristine-githige/" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>

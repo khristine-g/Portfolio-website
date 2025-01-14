@@ -112,6 +112,8 @@ body {
     font-weight: bold;
     transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 0 15px rgba(255, 111, 97, 0.7);
+    width: 200px; /* Ensures buttons are equal in size */
+    text-align: center;
 }
 
 .download-cv-btn:hover,
@@ -266,6 +268,7 @@ body {
     .code-section {
         width: 100%;
     }
+   
 }
 
 @media (max-width: 768px) {
@@ -290,6 +293,7 @@ body {
 
     .buttons {
         justify-content: center;
+      
     }
 
     .code-section {
