@@ -295,6 +295,10 @@ body {
     .code-section {
         max-width: 100%;
     }
+    .divider-line{
+
+        height: 50px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -319,6 +323,11 @@ body {
         flex-direction: column;
         gap: 15px;
     }
+    .divider-line{
+
+        height: 50px;
+    }
+   
 
     .download-cv-btn,
     .contact-btn {
