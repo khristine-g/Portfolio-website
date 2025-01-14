@@ -4,24 +4,23 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 80px; /* Modern size */
-    background: rgba(0, 0, 0, 0.8); /* Dark background with some transparency */
+    height: 80px;
+    background: rgba(0, 0, 0, 0.8);
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Space between logo and links */
-    padding: 0 20px; /* Adjusted padding */
+    justify-content: space-between;
+    padding: 0 20px;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
     z-index: 1000;
-    backdrop-filter: blur(15px); /* Subtle blur effect */
-    overflow-x: auto; /* Allow horizontal scrolling if needed */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
-    letter-spacing: 1px; /* Improve letter spacing */
+    backdrop-filter: blur(15px);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 1px;
 }
 
 /* Logo */
 .logo {
     color: #ffffff;
-    font-size: 24px; /* Larger font size for modern look */
+    font-size: 24px;
     font-weight: 700;
     text-transform: uppercase;
     display: flex;
@@ -29,42 +28,78 @@
 }
 
 .logo-icon {
-    margin-right: 10px; /* Slightly larger spacing */
-    font-size: 24px; /* Larger icon size */
-    color: #ff6f61; /* Keep this color consistent */
+    margin-right: 10px;
+    font-size: 24px;
+    color: #ff6f61;
 }
 
-/* Navigation links */
+/* Regular Navigation Links (visible on desktop) */
 .nav-links {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-grow: 1; /* Allow links to take available space */
-    overflow-x: auto; /* Enable horizontal scrolling on small screens */
+    flex-grow: 1;
+    overflow-x: auto;
 }
 
+/* Navigation item */
 .nav-item {
     display: inline-flex;
     align-items: center;
-    padding: 0 20px; /* Adjusted padding for better space */
+    padding: 0 20px;
     color: #dcdcdc;
     text-decoration: none;
-    font-size: 18px; /* Smaller font size */
-    text-transform: uppercase; /* For a modern, bold look */
+    font-size: 18px;
+    text-transform: uppercase;
     transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .nav-item:hover {
-    color: #ff6f61; /* Hover color */
-    transform: scale(1.1); /* Slight zoom effect on hover */
-    box-shadow: 0 4px 15px rgba(255, 111, 97, 0.7); /* Soft shadow */
+    color: #ff6f61;
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(255, 111, 97, 0.7);
     border-radius: 5px;
 }
 
-/* Mobile styles */
+/* Side Menu for Mobile */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.side-menu.open {
+    left: 0; /* Slide in the side menu */
+}
+
+.side-menu-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 60px;
+}
+
+.side-menu .nav-item {
+    padding: 20px 30px;
+    width: 100%;
+}
+
+.menu-icon {
+    display: none; /* Hide by default */
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Mobile styles (Below 768px) */
 @media (max-width: 768px) {
     .logo {
-        font-size: 20px; /* Slightly reduced size for mobile */
+        font-size: 20px;
     }
 
     .logo-icon {
@@ -72,19 +107,28 @@
     }
 
     .nav-item {
-        font-size: 16px; /* Slightly smaller text for links */
-        padding: 0 15px; /* Adjusted padding */
+        font-size: 16px;
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        display: none; /* Hide links on small screens */
+    }
+
+    /* Show the hamburger icon (toggle menu) only on small screens */
+    .menu-icon {
+        display: block; /* Show hamburger icon */
     }
 }
 
 /* Extra-small screens */
 @media (max-width: 480px) {
     .top-navbar {
-        height: 70px; /* Reduced height for very small screens */
+        height: 70px;
     }
 
     .logo {
-        font-size: 18px; /* Further reduced font size for very small screens */
+        font-size: 18px;
     }
 
     .logo-icon {
@@ -92,7 +136,11 @@
     }
 
     .nav-item {
-        font-size: 14px; /* Even smaller text for links */
-        padding: 0 10px; /* Further reduced padding */
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    .menu-icon {
+        font-size: 25px;
     }
 }

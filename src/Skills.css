@@ -1,5 +1,5 @@
 #skills {
-    padding: 40px;
+    padding: 60px 20px; /* Adjusted padding for better spacing */
     background-color: #121212;
     color: #f0f0f0;
     text-align: center;
@@ -33,9 +33,10 @@
 /* Skills Title */
 .skills-title {
     color: #ff6f61;
-    margin: 60px 0 20px;
-    font-size: 2rem; /* Smaller font size for better responsiveness */
+    margin: 0 0 40px 0;
+    font-size: 3rem; /* Larger font size for better visibility */
     font-weight: 700;
+    text-align: center;
     animation: fadeInUp 0.8s ease-out;
 }
 
@@ -113,10 +114,12 @@
 
 /* Hire Me Text */
 .hire-me-text h3 {
-    font-size: 1.8rem;
+    font-size: 2rem; /* Larger font size for better readability */
     color: #ff6f61;
     margin-bottom: 20px;
+    margin-top: 100px;
     font-weight: 700;
+    text-align: left; /* Align to the left for a modern look */
 }
 
 .hire-me-text p {
@@ -124,6 +127,7 @@
     color: #f0f0f0;
     line-height: 1.6;
     margin-bottom: 10px;
+    text-align: left; /* Align text to the left for better structure */
 }
 
 /* Animations */
@@ -164,17 +168,22 @@
     }
 
     .hire-me-text h3 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 
     .hire-me-text p {
-        font-size: 0.95rem;
+        font-size: 1rem;
+    }
+
+    /* Skill Items Adjustments */
+    .skills-list {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     }
 }
 
 @media (max-width: 768px) {
     .skills-title {
-        font-size: 1.8rem;
+        font-size: 2rem; /* Slightly smaller for better readability */
     }
 
     .skills-list {
@@ -183,13 +192,18 @@
     }
 
     .hire-me-text p {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
+    }
+
+    /* Further reduce space on mobile screens */
+    .skills-list {
+        gap: 12px;
     }
 }
 
 @media (max-width: 480px) {
     .skills-title {
-        font-size: 1.5rem;
+        font-size: 1.8rem; /* Slightly smaller for better screen fit */
     }
 
     .skills-list {
@@ -197,10 +211,15 @@
     }
 
     .hire-me-text h3 {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
 
     .hire-me-text p {
-        font-size: 0.85rem;
+        font-size: 0.9rem;
+    }
+
+    /* More compact layout for smaller screens */
+    .skills-container {
+        gap: 20px;
     }
 }

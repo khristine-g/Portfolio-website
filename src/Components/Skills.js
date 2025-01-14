@@ -31,7 +31,7 @@ const Skills = () => {
                 <span className="dot"></span>
                 <hr className="top-line" />
             </div>
-            <h2 className="skills-title">My Skills</h2>
+            <h2 className="skills-title">MY SKILLS</h2>
             <div className="skills-container">
                 <div className="skills-list">
                     {skills.map((skill, index) => (

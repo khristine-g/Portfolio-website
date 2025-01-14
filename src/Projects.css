@@ -25,14 +25,14 @@
   
   .projects-title{
     color: #ff6f61;
-    margin-bottom: 30px;
+    margin-bottom: 70px;
     font-size: 3rem;
     font-weight: 700;
-    text-align: left;
+    text-align: center;
     text-transform: uppercase;
    
     font-family: 'Lora', serif;
-    position: relative;
+    
    
   }
 
@@ -44,7 +44,7 @@
     width: 100px; /* Start with no width */
     height: 6px; /* Adjust the height of the line as needed */
     background-color: #ff6f61; /* Line color */
-    position: absolute;
+    
     margin: 10px auto 0; /* Adds spacing and centers the line */
 
   }

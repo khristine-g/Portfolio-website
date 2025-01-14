@@ -1,114 +1,150 @@
 #stats {
-    padding: 60px 20px;
-    background-color: #121212; /* Matches skills background */
-    color: #f0f0f0;
-    text-align: center;
-  }
-  
-  .stats-container {
-    display: flex;
-    justify-content: center; /* Align items centrally */
-    gap: 40px;
-    margin: 0 auto;
-    animation: fadeInUp 1s ease-out;
-    flex-wrap: nowrap; /* Ensure stats stay on one row */
-  }
-  
-  .stat-item {
-    position: relative; /* Ensure the rings are positioned correctly */
-    background-color: #222; /* Dark card background */
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    padding: 30px 20px;
-    width: 350px; /* Adjust width to fit in a single row */
-    height: 200px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer; /* Add interactivity */
-  }
-  
-  /* Only apply rings to specific items (first and last) */
-  .stat-item:first-child::after {
-    content: '';
-    position: absolute;
-    width: 100px; /* Increased thickness of the rings */
-    height: 100px;
-    border: 16px solid #ff6f61; /* Increased border thickness */
-    border-radius: 50%; /* Circular shape */
-    opacity: 0.5; /* Partially hidden */
-    bottom: -20px;
-    left: -40px; /* Ring for the bottom-left corner of Happy Clients */
-    z-index: -1; /* Keep the rings behind the content */
-    transition: opacity 0.3s ease;
-  }
-  
-  .stat-item:last-child::before {
-    content: '';
-    position: absolute;
-    width: 100px; /* Increased thickness of the rings */
-    height: 100px;
-    border: 16px solid #ff6f61; /* Increased border thickness */
-    border-radius: 50%; /* Circular shape */
-    opacity: 0.5; /* Partially hidden */
-    top: -20px;
-    right: -40px; /* Ring for the top-right corner of Tech Stacks Mastered */
-    z-index: -1; /* Keep the rings behind the content */
-    transition: opacity 0.3s ease;
-  }
-  
-  /* Hover effect for rings */
-  .stat-item:hover::before,
-  .stat-item:hover::after {
-    opacity: 0.3; /* Make the rings less visible on hover */
-  }
-  
-  .stat-item:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
-  }
-  
-  .stat-number {
-    font-size: 3rem; /* Adjusted for uniformity */
-    font-weight: 700;
-    color: #ff6f61; /* Accent color */
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-    animation: fadeInUp 0.8s ease-out;
-  }
-  
-  .stat-number span {
-    font-size: 1.5rem; /* Smaller '+' */
-    color: #fff; /* White for contrast */
-    margin-left: 5px;
-  }
-  
-  .stat-label {
-    font-size: 1.2rem;
-    font-weight: 500;
-    margin-top: 15px;
-    color: #f0f0f0;
-    animation: fadeInUp 1.2s ease-out;
-  }
-  
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .animate-on-scroll {
+  padding: 60px 20px;
+  background-color: #121212;
+  color: #f0f0f0;
+  text-align: center;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 0 auto;
+  animation: fadeInUp 1s ease-out;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  justify-content: space-evenly; /* Adjust to distribute space on smaller screens */
+}
+
+.stat-item {
+  position: relative;
+  background-color: #222;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  padding: 30px 20px;
+  width: 350px;
+  height: 200px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.stat-item:first-child::after,
+.stat-item:last-child::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 16px solid #ff6f61;
+  border-radius: 50%;
+  opacity: 0.5;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+}
+
+.stat-item:first-child::after {
+  bottom: -20px;
+  left: -40px;
+}
+
+.stat-item:last-child::before {
+  top: -20px;
+  right: -40px;
+}
+
+.stat-item:hover::before,
+.stat-item:hover::after {
+  opacity: 0.3;
+}
+
+.stat-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ff6f61;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.stat-number span {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-left: 5px;
+}
+
+.stat-label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 15px;
+  color: #f0f0f0;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
     opacity: 0;
-    transform: translateY(200px);
-    transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+    transform: translateY(20px);
   }
-  
-  .animate-on-scroll.in-view {
+  to {
     opacity: 1;
     transform: translateY(0);
   }
-  
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(200px);
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+
+.animate-on-scroll.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Media Queries for Responsiveness */
+
+/* For mobile phones */
+@media screen and (max-width: 768px) {
+  .stats-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .stat-item {
+    width: 80%; /* Adjust width to be more mobile-friendly */
+    height: auto; /* Allow height to be flexible */
+  }
+
+  .stat-number {
+    font-size: 2.5rem; /* Slightly smaller numbers on smaller screens */
+  }
+
+  .stat-label {
+    font-size: 1rem;
+  }
+}
+
+/* For very small mobile screens */
+@media screen and (max-width: 480px) {
+  .stats-container {
+    gap: 10px; /* Reduce gap for very small screens */
+  }
+
+  .stat-item {
+    width: 90%; /* Make items full-width on very small screens */
+    height: auto;
+  }
+
+  .stat-number {
+    font-size: 2rem; /* Further reduce the size of numbers */
+  }
+
+  .stat-label {
+    font-size: 0.9rem; /* Reduce label font size */
+  }
+}
