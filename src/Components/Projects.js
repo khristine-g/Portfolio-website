@@ -19,7 +19,7 @@ const projects = [
     title: 'Real-estate website',
     description: 'An intuitive real estate platform for browsing, buying, selling, and renting properties.',
     techStack: 'React, Ruby on Rails, Css,Sqlite',
-    link: 'https://urbanrealty.vercel.app/',
+    link: 'https://vercel.com/khristine-githiges-projects/realty',
     github: ' https://github.com/khristine-g/Real-estate',
     image: projectTwoImage,
   },
