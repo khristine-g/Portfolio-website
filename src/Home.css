@@ -221,7 +221,7 @@ body {
 }
 
 .mock-code::before {
-    content: "// Welcome to Khristine's Portfolio! 👩‍💻";
+    content: "// Khristine's Portfolio! 👩‍💻";
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;

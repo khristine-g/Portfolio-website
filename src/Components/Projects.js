@@ -2,7 +2,7 @@ import React from 'react';
 
 import projectOneImage from '../images/Screenshot3.png';
 import projectTwoImage from '../images/Screenshot1.png';
-import projectThreeImage from '../images/Screenshot4.png';
+import projectThreeImage from '../images/screenshot5.png';
 import projectFourImage from '../images/Screenshot2.png';
 import '../Projects.css';
 
@@ -28,8 +28,8 @@ const projects = [
       title: 'Crowdfunding Website',
       description: 'A platform to support and fund innovative projects, empowering creators to bring their ideas to life through collective contributions.',
       techStack: 'React, Bootstrap',
-      link: 'https://socialmedia-app.vercel.app/',
-      github: 'https://github.com/userna',
+      link: 'https://empowerher-two.vercel.app/',
+      github: 'https://github.com/khristine-g/Empowerher',
       image: projectThreeImage,
     },
     
