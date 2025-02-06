@@ -1,4 +1,5 @@
 Khristine's Portfolio – Showcasing My Web Development Journey 🚀💻
+
 About the Project
 Welcome to my personal portfolio website! This platform is designed to showcase my skills, projects, and achievements as a web developer. It serves as a digital resume, allowing visitors to explore my work, learn about my expertise, and connect with me for potential opportunities.
 
