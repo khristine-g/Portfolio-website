@@ -1,5 +1,6 @@
 MY PORTFOLIO – Showcasing My Web Development Journey 🚀💻
 
+
 ABOUT THE PROJECT
 
 Welcome to my personal portfolio website! This platform is designed to showcase my skills, projects, and achievements as a web developer. It serves as a digital resume, allowing visitors to explore my work, learn about my expertise, and connect with me for potential opportunities.
@@ -9,8 +10,11 @@ The website is built with a modern, sleek, and fully responsive design, ensuring
 WHY THIS PORTFOLIO?
 
 💡 Modern & Minimalistic Design – A clean, user-friendly interface.
+
 🌍 Fully Responsive – Optimized for desktop, tablet, and mobile.
+
 🛠 Showcases Real Projects – A dedicated section for my web development work.
+
 📧 Easy Contact Form – Connect with me for collaborations or job opportunities.
 
 
@@ -27,7 +31,9 @@ Highlights my technical skills and areas of expertise (Frontend, Backend, Full-S
 A gallery of my best projects, each with:
 
 ✅ A project title & description
-✅ Technologies used (React, Rails, etc.)
+
+✅ Technologies used (React, Rails)
+
 ✅ Live demo & GitHub repository links
 
 📩 Contact Section
