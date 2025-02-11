@@ -20,6 +20,22 @@ const Home = () => {
     return () => observer.disconnect();
   }, []);
 
+  // Define button data as an array of objects
+  const buttons = [
+    {
+      label: "Download CV",
+      url: "/KhristineGithige_Resume.docx",
+      download: true,
+      className: "download-cv-btn",
+    },
+    {
+      label: "GitHub Link",
+      url: "https://github.com/khristine-g",
+      download: false,
+      className: "contact-btn",
+    }
+  ];
+
   return (
     <section id="home" className="animate-on-scroll">
       <div className="home-container">
@@ -33,13 +49,25 @@ const Home = () => {
             <span className="dynamic-role">Software Developer</span>
           </h2>
           <p className="developer-description">
-            I'm dedicated to building intuitive, user-focused web applications. I’m passionate about leveraging technology to solve problems and create meaningful digital experiences.
+            I'm dedicated to building intuitive, user-focused web applications.
+            I’m passionate about leveraging technology to solve problems and
+            create meaningful digital experiences.
           </p>
+
+          {/* Dynamically Render Buttons */}
           <div className="buttons">
-            <a href="/Khristine-cv.docx" download className="download-cv-btn">
-              Download CV
-            </a>
-            <a href="#contact" className="contact-btn">Contact</a>
+            {buttons.map((btn, index) => (
+              <a
+                key={index}
+                href={btn.url}
+                className={btn.className}
+                {...(btn.download
+                  ? { download: "KhristineGithige_Resume.docx" }
+                  : { target: "_blank", rel: "noopener noreferrer" })}
+              >
+                {btn.label}
+              </a>
+            ))}
           </div>
         </div>
 
@@ -55,8 +83,6 @@ const Home = () => {
           </div>
           <pre className="mock-code">
             <code>
-              {/* Typing effect only once */}
-            
               {`
 function makeApp() {
     const skills = ["React", "Ruby on Rails", "UI/UX Design"];
@@ -65,7 +91,8 @@ function makeApp() {
     return { skills, motto };
 }
 
-makeApp();`}
+makeApp();
+              `}
             </code>
           </pre>
         </div>
@@ -75,5 +102,4 @@ makeApp();`}
 };
 
 export default Home;
-
 
